@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+html{
+    font-family: "Kumbh Sans";
+    font-size: 12px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.faq{
+    list-style: none;
+}
+
+body{
+    min-height: 100vh;
+    display: block;
+    padding-top: 15em;
+    background-image:linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%)) ;
+    position: relative;
+}
+
+
+.container{
+    margin: 0 auto;
+    width: 80vw;
+    max-width: 900px;
+    height: max-content;
+    background-color:hsl(0, 0%, 100%);
+    border-radius: 2em;
+    padding-bottom: 1em;
+    position: relative;
+    box-shadow:0px 35px 30px rgba(90,68,192,255);
+}
+.mobile-img{
+    position: absolute;
+    left: 40%;
+    transform: translateX(-40%);
+    top: -9em;
+}
+.desktop-img{
+    display: none;
+}
+.faqs{
+    padding: 2em;
+    padding-top: 10em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.faqs h1{
+    text-align: center;
+    color: hsl(238, 29%, 16%);
+}
+.faq{
+    border-bottom: 0.1em hsl(240, 3%, 61%) solid;
+    padding-bottom: 1em;
+}
+.question{
+    display: flex;
+    justify-content: space-between;
+    color: hsl(237, 12%, 33%);
+    cursor: pointer;
+}
+.question-show{
+    font-weight: 700;
+    color: hsl(238, 29%, 16%);
+}
+.answer{
+    color: hsl(240, 6%, 50%);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 200ms ease-in-out;
+}
+.answer-show{
+    transition: max-height 200ms ease-in-out;
+    max-height: 30px;
+    width: auto;
+    margin-top: 0.5em;
+}
+.arrow{
+    transition: transform 200ms ease-in-out;
+}
+.arrow-show{
+    transform: rotate(180deg);
+}
+
+@media (min-width: 900px){
+    body{
+        position: relative;
+    }
+    .container{
+        display: flex;
+        gap: 2em;
+        padding: 0;
+        overflow: hidden;
+        position: unset;
+        
+    }
+    .container h1{
+        text-align: left;
+        margin-bottom: 1em;
+    }
+    .mobile-img{
+        display: none;
+        align-self: center;
+        position: relative;
+        overflow: hidden;
+    }
+    .desktop-img{
+        display: block;
+        width: 100%;
+        height: max-content;
+        padding: 2em;
+        padding-right: 0;
+        margin-left: -9em;
+        background-image: url("images/bg-pattern-desktop.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .box{
+        position: absolute;
+        bottom: 38%;
+        margin-left: -1em;
+       
+    }
+    .faqs{
+        width: 100%;
+        height: max-content;
+        padding: 0;
+        margin: 6em;
+        margin-left: 0;
+    }
+}
+footer{
+    position: absolute;
+    left: 40%;
+    bottom: 10%;
+        
+}
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(0, 0%, 100%); 
+}
